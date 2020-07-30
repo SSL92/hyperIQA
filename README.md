@@ -21,7 +21,7 @@ Training and testing our model on LIVE Challenge Dataset.
 python train_test_IQA.py
 ```
 
-Available options:
+Some available options:
 * `--dataset`: Training and testing dataset, support datasets: livec | koniq-10k | bid | live | csiq | tid2013.
 * `--train_patch_num`: Sampled image patch number from each training image.
 * `--test_patch_num`: Sampled image patch number from each testing image.
@@ -38,6 +38,3 @@ month = {June},
 year = {2020}
 }
 ```
-
-
-
