@@ -135,8 +135,8 @@ class CSIQFolder(data.Dataset):
             words = line[0].split()
             imgnames.append((words[0]))
             target.append(words[1])
-            refname = words[0].split(".")
-            refnames_all.append(refname[0] + '.' + refname[-1])
+            ref_temp = words[0].split(".")
+            refnames_all.append(ref_temp[0] + '.' + ref_temp[-1])
 
         labels = np.array(target).astype(np.float32)
         refnames_all = np.array(refnames_all)
@@ -265,7 +265,7 @@ class TID2013Folder(data.Dataset):
 
     def __init__(self, root, index, transform, patch_num):
         refpath = os.path.join(root, 'reference_images')
-        refname = getFileName( refpath,'.bmp.BMP')
+        refname = getTIDFileName(refpath,'.bmp.BMP')
         txtpath = os.path.join(root, 'mos_with_names.txt')
         fh = open(txtpath, 'r')
         imgnames = []
@@ -276,8 +276,8 @@ class TID2013Folder(data.Dataset):
             words = line[0].split()
             imgnames.append((words[1]))
             target.append(words[0])
-            refname = words[1].split("_")
-            refnames_all.append(refname[0][1:])
+            ref_temp = words[1].split("_")
+            refnames_all.append(ref_temp[0][1:])
         labels = np.array(target).astype(np.float32)
         refnames_all = np.array(refnames_all)
 
@@ -316,6 +316,15 @@ def getFileName(path, suffix):
     for i in f_list:
         if os.path.splitext(i)[1] == suffix:
             filename.append(i)
+    return filename
+
+
+def getTIDFileName(path, suffix):
+    filename = []
+    f_list = os.listdir(path)
+    for i in f_list:
+        if suffix.find(os.path.splitext(i)[1]) != -1:
+            filename.append(i[1:3])
     return filename
 
 
