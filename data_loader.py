@@ -74,7 +74,7 @@ class DataLoader(object):
             self.data = folders.Koniq_10kFolder(
                 root=path, index=img_indx, transform=transforms, patch_num=patch_num)
         elif dataset == 'bid':
-            self.data = folders.BIDFolderAug(
+            self.data = folders.BIDFolder(
                 root=path, index=img_indx, transform=transforms, patch_num=patch_num)
         elif dataset == 'tid2013':
             self.data = folders.TID2013Folder(

@@ -211,7 +211,7 @@ class Koniq_10kFolder(data.Dataset):
         return length
 
 
-class BIDFolderAug(data.Dataset):
+class BIDFolder(data.Dataset):
 
     def __init__(self, root, index, transform, patch_num):
 
