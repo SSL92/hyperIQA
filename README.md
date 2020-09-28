@@ -13,9 +13,23 @@ This is the source code for the CVPR'20 paper "[Blindly Assess Image Quality in 
 - csv (KonIQ-10k Dataset)
 - openpyxl (BID Dataset)
 
-## Training & Testing
+## Usages
 
-Training and testing our model on LIVE Challenge Dataset.
+### Testing a single image
+
+Predicting image quality with our model trained on the Koniq-10k Dataset.
+
+To run the demo, please download the pre-trained model at [Google drive](https://drive.google.com/file/d/1XBN_-fmUrDMm6nZ-Sf60BJGrDs735_s1/view?usp=sharing) or [Baidu cloud](https://pan.baidu.com/s/1yY3O8DbfTTtUwXn14Mtr8Q) (password: 1ty8), put it in 'pretrained' folder, then run:
+
+```
+python demo.py
+```
+
+You will get a quality score ranging from 0-100, and a higher value indicates better image quality.
+
+### Training & Testing on IQA databases
+
+Training and testing our model on the LIVE Challenge Dataset.
 
 ```
 python train_test_IQA.py

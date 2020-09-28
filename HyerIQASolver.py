@@ -43,7 +43,7 @@ class HyperIQASolver(object):
 
             for img, label in self.train_data:
                 img = torch.tensor(img.cuda())
-                label = torch.tensor(label.cuda(async=True))
+                label = torch.tensor(label.cuda())
 
                 self.solver.zero_grad()
 
@@ -96,7 +96,7 @@ class HyperIQASolver(object):
         for img, label in data:
             # Data.
             img = torch.tensor(img.cuda())
-            label = torch.tensor(label.cuda(async=True))
+            label = torch.tensor(label.cuda())
 
             paras = self.model_hyper(img)
             model_target = models.TargetNet(paras).cuda()
