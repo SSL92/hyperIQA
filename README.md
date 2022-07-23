@@ -19,7 +19,7 @@ This is the source code for the CVPR'20 paper "[Blindly Assess Image Quality in 
 
 Predicting image quality with our model trained on the Koniq-10k Dataset.
 
-To run the demo, please download the pre-trained model at [Google drive](https://drive.google.com/file/d/1XBN_-fmUrDMm6nZ-Sf60BJGrDs735_s1/view?usp=sharing) or [Baidu cloud](https://pan.baidu.com/s/1yY3O8DbfTTtUwXn14Mtr8Q) (password: 1ty8), put it in 'pretrained' folder, then run:
+To run the demo, please download the pre-trained model at [Google drive](https://drive.google.com/file/d/1OOUmnbvpGea0LIGpIWEbOyxfWx6UCiiE/view?usp=sharing) or [Baidu cloud](https://pan.baidu.com/s/1yY3O8DbfTTtUwXn14Mtr8Q) (password: 1ty8), put it in 'pretrained' folder, then run:
 
 ```
 python demo.py
